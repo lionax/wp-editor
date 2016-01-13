@@ -1,6 +1,5 @@
-=== Editor WordPress Theme ===
-Contributors: array, okaythemes
-Donate link: https://array.is/
+# Editor WordPress Theme
+Contributors: lionax, array, okaythemes
 Tags: light, white, gray, two-columns, left-sidebar, responsive-layout, custom-colors, editor-style, featured-images, theme-options, threaded-comments, translation-ready, photoblogging
 Requires at least: 3.8
 Tested up to: 3.9.1
@@ -11,15 +10,15 @@ Screenshot image license: GPLv2 or later
 
 Editor puts bold and beautiful publishing right at your fingertips with comfortable, legible typography and large featured images. Using Featured Posts, you can display your favorite articles or editorials in the sidebar for even more exposure.
 
-== Description ==
+## Description
 
 Editor puts bold and beautiful publishing right at your fingertips with comfortable, legible typography and large featured images. Using Featured Posts, you can display your favorite articles or editorials in the sidebar for even more exposure.
 
--------------------------------------------------------
-Getting started with Editor WordPress Theme
--------------------------------------------------------
+----------
 
-= Using the Theme Customizer =
+### Getting started with Editor WordPress Theme
+
+**Using the Theme Customizer**
 You can change Editor’s theme options via the Customizer.
 
 * To access the theme customizer, click Appearance → Customize in the WordPress admin menu. Editor’s options are located in the Theme Options tab.
@@ -30,7 +29,7 @@ You can change Editor’s theme options via the Customizer.
 
 ----------
 
-= Menu Setup =
+### Menu Setup
 You’ll need to create at least one new menu for the header.
 
 * WordPress menus can be found under Appearence → Menus.
@@ -41,7 +40,7 @@ You’ll need to create at least one new menu for the header.
 
 ----------
 
-= Installing Jetpack =
+### Installing Jetpack
 Jetpack is a WordPress plugin by Automattic, the folks who make WordPress. It’s a toolkit that provides various features and enhancements to your WordPress site. Editor utilizes several features (infinite scroll, carousel, etc.) of Jetpack, and must be installed for the theme to work as you see in the demo.
 
 * Install Jetpack by going to Plugins → Add New and search for “Jetpack”. Install and activate the plugin. Once installed, you can enable Jetpack by
@@ -60,7 +59,7 @@ Infinite Scroll – Infinite Scroll is a feature that loads the next set of post
 
 ----------
 
-= Contact Page =
+### Contact Page
 Editor utilizes Jetpack’s contact form module for adding contact forms to your pages.
 
 * Firstly, make sure the Contact Form module is activated on the Jetpack page.
@@ -70,22 +69,22 @@ Editor utilizes Jetpack’s contact form module for adding contact forms to your
 
 ----------
 
-= Widgets =
+### Widgets
 The widget section of Editor is located in the sidebar as a hidden menu. You can view your widgets by clicking the folder icon in Editor’s sidebar menu.
 
 ----------
 
-= Creating Media Posts =
+### Creating Media Posts
 Editor makes it easy to share your images, videos, and quotes.
 
-** Featured Image Posts **
+**Featured Image Posts**
 
 * Create a new post and add a title and description.
 * Write your content and add whatever styling you want.
 * On the right hand side of your page, you’ll see the Featured Image pane. Click Set Featured Image and upload your image. Once uploaded, scroll down and click Use as featured image. Once set, you can close the image upload window.
 * Once you’ve added the featured image and content you can publish and preview your post.
 
-** Quote Post **
+**Quote Post**
 
 * Create a new post and add a title and add your quote to the editor.
 * Add a quote citation by adding a name and wrapping it in a tag. See an example.
@@ -94,16 +93,16 @@ Editor makes it easy to share your images, videos, and quotes.
 
 ----------
 
-= Post Styles =
+### Post Styles
 Editor comes with a few custom element styles, which are used to easily add extra styling to your WordPress posts.
 
-** Pull Quotes **
+**Pull Quotes**
 
 Pull quotes are similar to block quotes, but are reserved for less text. See Editor’s Style Guide to see the suggested usage. To use pull quotes you can add a class of pull-left or pull-right to your content. See an example below.
 
 <span class="pull-right">This text will be pulled right.</span>
 
-** Text Highlight **
+**Text Highlight**
 
 Text highlight simply adds a yellow background to your text, useful for in-paragraph emphasis. To use the highlight style, you can add a class of highlight to your content. See an example below.
 
@@ -111,13 +110,13 @@ Text highlight simply adds a yellow background to your text, useful for in-parag
 
 ----------
 
-= License Info =
+## License Info
 Font Awesome - ​http://fontawesome.io
 License: SIL OFL 1.1, CSS: MIT License - http://fontawesome.io/license
 Copyright: @davegandy
 
 
-== Installation ==
+### Installation
 
 1. Sign into your WordPress dashboard, go to Appearance > Themes, and click Add New.
 2. Click Add New.
@@ -128,63 +127,65 @@ Copyright: @davegandy
 7. After WordPress installs the theme, click Activate.
 8. You've successfully installed your new theme!
 
-== Frequently Asked Questions ==
+### Frequently Asked Questions
 
-= I need help! What should I do? =
+## I need help! What should I do?
 
-Visit our support forum at array.is and we'll give you a hand.
+Leave an issue at the github repo github.de/lionax/wp-editor.
+Or leave a comment at the blog post on 8api.de.
+Questions on features before Version 1.1.3 can be answered by the great people at the support forum of array.is.
 
-== Screenshots ==
+## Screenshots
 
 1. The theme home page filled with demo content.
 
-== Change Log ==
-= 1.1.3 - 9/16/15 =
+### Change Log
+**1.1.3 - 9/16/15**
 * Ported improvements from WordPress.com version of Editor. Adds accessibility improvements, social links menu (see here for use: https://en.support.wordpress.com/menus/social-links-menu/) and general file cleanup.
 * Added link post format.
 * Fixed byline appearance on index.
 
-= 1.1.2 - 8/15/15 =
+**1.1.2 - 8/15/15**
 * General file cleanup.
 
-= 1.1.1 - 12/16/14 =
+**1.1.1 - 12/16/14**
 * Added fix for animations on Android devices.
 * Added link titles for sidebar toggle buttons.
 
-= 1.1.0 - 11/17/14 =
+**1.1.0 - 11/17/14**
 * Fixed Jetpack Infinite Scroll button style.
 * Added screenshot license to readme.txt.
 
-= 1.0.8 - 9/4/14 =
+**1.0.8 - 9/4/14**
 * Fixed an issue that caused radio buttons to not be shown.
 
-= 1.0.7 - 8/31/14 =
+**1.0.7 - 8/31/14**
 * Added .pot language file.
 * Added Finnish language files.
 * Regenerated English language files.
 
-= 1.0.6 - 8/27/14 =
+**1.0.6 - 8/27/14**
 * Fixed a bug for full screen video in Chrome.
 
-= 1.0.5 - 7/11/14 =
+**1.0.5 - 7/11/14**
 * Fixed a bug in the mobile navigation menu.
 
-= 1.0.4 - 6/25/14 =
+**1.0.4 - 6/25/14**
 * Fixed an issue with icon fonts and styles for Internet Explorer not loading in child themes.
 
-= 1.0.3 - 6/17/14 =
+**1.0.3 - 6/17/14**
 * Added ability to toggle menu open and closed on tablet and mobile.
 
-= 1.0.2 - 6/8/14 =
+**1.0.2 - 6/8/14**
 * Added fix for multiple scrollbars in Chrome on IE.
 
-= 1.0.1 - 6/9/14 =
+**1.0.1 - 6/9/14**
 * Added Font Awesome license info.
 * Minor maintenance.
 
-= 1.0 - 5/21/2014 =
+**1.0 - 5/21/2014**
 * Initial release.
 
-== Upgrade Notice ==
-= 1.0.4 =
+### Upgrade Notice
+**1.0.4**
 Fixed an issue with icon fonts and styles for Internet Explorer not loading in child themes.
