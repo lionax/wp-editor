@@ -1,4 +1,4 @@
-# Editor WordPress Theme
+# Fork of Editor WordPress Theme
 Contributors: lionax, array, okaythemes
 Tags: light, white, gray, two-columns, left-sidebar, responsive-layout, custom-colors, editor-style, featured-images, theme-options, threaded-comments, translation-ready, photoblogging
 Requires at least: 3.8
@@ -8,7 +8,7 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Screenshot image license: GPLv2 or later
 
-Editor puts bold and beautiful publishing right at your fingertips with comfortable, legible typography and large featured images. Using Featured Posts, you can display your favorite articles or editorials in the sidebar for even more exposure.
+The name of this theme will be updated, as soon as the next release is finished.
 
 ## Description
 
