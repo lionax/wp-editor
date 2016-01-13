@@ -1750,6 +1750,10 @@ embed, iframe, object {
 			font-size: 16px;
 		}
 	}
+
+	.dark & {
+		background: #fff;
+	}
 }
 
 .social-links ul a:before {
@@ -1763,6 +1767,9 @@ embed, iframe, object {
 		 -o-transition: all .3s ease-in-out;
 			transition: all .3s ease-in-out;
 	text-align:center;
+	.dark & {
+		color: $black;
+	}
 }
 
 .social-links ul a:hover {
@@ -1772,6 +1779,9 @@ embed, iframe, object {
 	   -moz-transition:all .3s ease-in-out;
 		 -o-transition:all .3s ease-in-out;
 			transition:all .3s ease-in-out;
+	.dark & {
+		background: $lightgray;
+	}
 }
 
 .social-links ul a[href*='wordpress.org']:before,
