@@ -1278,7 +1278,7 @@ embed, iframe, object {
 	position: fixed;
 	top: 0;
 	height: 100%;
-	width: 20%;
+	width: $size-sidebar;
 	padding: 90px 2% 2% 2%;
 	overflow: scroll;
 	overflow-x: hidden;
@@ -1361,12 +1361,13 @@ embed, iframe, object {
 -------------------------------------------------------------- */
 .site-footer {
 	display: inline-block;
-	padding: 0 6% 4% 26%;
+	padding: 0 6% 4% calc(#{$size-sidebar} + 6%);
 	width: 100%;
-	@include sans-uppercase;
+	font-size: 1em;
 	.site-info {
 		background: #f5f5f5;
 		padding: 2.5%;
+		@include sans-uppercase;
 	}
 	@include viewport(mobile) {
 		padding: 5%;
@@ -1403,7 +1404,7 @@ embed, iframe, object {
 .site-content {
 	display: inline-block;
 	width: 100%;
-	padding: 5% 6% 4% 26%;
+	padding: 5% 6% 4% calc(#{$size-sidebar} + 6%);
 	@include viewport(mobile) {
 		padding: 5%;
 	}

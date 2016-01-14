@@ -9,6 +9,9 @@ $gray: #999;
 $black: #404040;
 $lightgray: #eee;
 
+/* Container Sizes */
+$size-sidebar: 13em;
+
 /* Responsive media query mixins */
 @mixin viewport($point) {
 	@if $point == desktop {
