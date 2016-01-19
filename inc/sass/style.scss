@@ -1101,13 +1101,16 @@ a:hover, a:focus, a:active {
 }
 .comment-list .avatar {
 	display: inline-block;
-	margin-right: 5%;
-	margin-top: 2%;
 	border-radius: 100px;
 	vertical-align: top;
-	width: 8%;
+	width: 18%;
+	float: right;
 	@include breakpoint(6) {
+		clear: both;
 		margin-top: 0;
+		margin-right: 5%;
+		width: 13%;
+		margin-top: 2%;
 	}
 }
 .comment-wrap {
