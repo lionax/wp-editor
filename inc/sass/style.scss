@@ -1052,6 +1052,14 @@ a:hover, a:focus, a:active {
 
 .comment-content {
 	font-size: 0.9em;
+	& p {
+		width: 117%; /* revert parent width */
+	}
+	@include breakpoint(4) {
+		& p {
+			width: 100%;
+		}
+	}
 	@include breakpoint(10) {
 		font-size: 1em;
 	}
@@ -1103,13 +1111,13 @@ a:hover, a:focus, a:active {
 	display: inline-block;
 	border-radius: 100px;
 	vertical-align: top;
-	width: 18%;
+	width: 15%;
 	float: right;
-	@include breakpoint(6) {
-		clear: both;
+	@include breakpoint(4) {
+		float: none;
 		margin-top: 0;
 		margin-right: 5%;
-		width: 13%;
+		width: 10%;
 		margin-top: 2%;
 	}
 }
