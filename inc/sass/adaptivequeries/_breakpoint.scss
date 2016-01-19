@@ -1,0 +1,50 @@
+//- ADAPTIVEQUERIES:BREAKPOINT
+// The SCSS Adaptive-Breakpoint Mixin is part of my
+// Adaptive-Queries Framework.
+//
+// How to use:
+//   @import 'adaptivequeries/breakpoint';
+//   @include breakpoint('specifiy inch')
+//   {
+//     'your code goes here'
+//   }
+//
+// Author: A. Wellbrock
+// Version: 1.0
+
+// more cases result in support of higher ppi-displays
+// but produce more output, therefore more code.
+// most displays report lower ppi than they really
+// have. Going up to 2.5 will most likely last.
+$maxPixelDensity: 2.5;
+$base-dpi: 96; // 96ppi = pixel-ratio: 1
+$base-px: 14px; // looks good on 96ppi
+// smaller steps generate better results but
+// also produces more code.
+$step: 0.25; 
+
+// $inch:integer is the real world inch value, this query will
+//               be activated at.
+@mixin breakpoint($inch) 
+{
+	$i: 1;
+	$query: '';
+	@while ($i <= $maxPixelDensity)
+  {
+    // we calculate the threshold one step ahead of the
+    // standard dpi and with an exponential increase of
+    // 1% each step. This results out of several mesurements
+    // from practise examples and proofed to be a good
+    // approximation.
+    // more info on "why" at my blog.
+		$query: $query + '(min-resolution: #{$i * $base-dpi}dpi) and (min-width: #{floor($inch * ($i + $step) * 1.01 * $base-dpi)}px), (-webkit-min-device-pixel-ratio: #{$i}) and (min-width: #{floor($inch * ($i + $step) * 1.01 * $base-dpi)}px)';
+		// no ',' for the last entry
+    @if ($i != $maxPixelDensity)
+		{
+			$query: $query + ',';
+		}
+		$i: $i + $step;
+	}
+  // Print the query with the specified content
+	@media #{$query} {@content;}
+}
