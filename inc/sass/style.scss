@@ -709,6 +709,9 @@ a:hover, a:focus, a:active {
 	width: auto;
 	z-index: 100000; /* Above WP toolbar */
 }
+.site {
+	min-width: 12em;
+}
 
 /* --------------------------------------------------------------
 7.0 Alignments
