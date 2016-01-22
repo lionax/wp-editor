@@ -450,7 +450,6 @@ a:hover, a:focus, a:active {
 .main-navigation {
 	clear: both;
 	display: block;
-	float: left;
 	padding-top: 20px;
 	width: 100%;
 	@include breakpoint(6) {
@@ -1802,6 +1801,7 @@ embed, iframe, object {
 	margin: 0 auto 10px;
 	padding-top: 20px;
 	width: 100%;
+	display: inline-block !important;
 	@include breakpoint(6) {
 		margin: 0 auto 1em;
 		padding-top: 30px;
