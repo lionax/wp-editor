@@ -25,7 +25,7 @@ $step: 0.25;
 
 // $inch:integer is the real world inch value, this query will
 //               be activated at.
-@mixin breakpoint($inch) 
+@mixin at-width($inch) 
 {
 	$i: 1;
 	$query: '';

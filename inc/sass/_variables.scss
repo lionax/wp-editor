@@ -1,4 +1,4 @@
-@import 'adaptivequeries/breakpoint';
+@import 'adaptivestyles/at-width';
 
 /* Body font styles */
 $sans: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -15,9 +15,12 @@ $lightgray: #eee;
 $size-sidebar: 13em;
 
 /* Responsive media query mixins */
-@mixin viewport($point) {
+@mixin bp($point) {
 	@if $point == desktop {
-		@include breakpoint(4);
+		@include at-width(4) { @content; };
+	}
+	@else if $point == test {
+		@include at-width(6) { @content; };
 	}
 	@else if $point == mobile {
 		@media ( /* Mobile style */ max-width: 768px )  { @content; }

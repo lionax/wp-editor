@@ -6,6 +6,7 @@
  *
  * @package Editor
  */
+	$editor_color = get_option( 'editor_customizer_sidebar_color' );
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -20,7 +21,7 @@
 
 <body <?php body_class(); ?>>
 
-<div id="page" class="hfeed site container">
+<div id="page" class="hfeed site container <?php echo $editor_color ?>">
 
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'editor' ); ?></a>
 
