@@ -49,6 +49,11 @@
 			<li id="panel-3" role="presentation">
 				<a href="#tab-3" role="tab" aria-controls="tab-3" aria-selected="false" class="folder-toggle" data-tab="tab-3"><i class="fa fa-folder"></i><i class="fa fa-folder-open"></i><span class="screen-reader-text"><?php _e( 'View sidebar', 'editor' ); ?></span></a>
 			</li>
+
+			<!-- Searchform -->
+			<li id="panel-3" role="presentation">
+				<a href="#tab-4" role="tab" aria-controls="tab-4" aria-selected="false" class="folder-toggle" data-tab="tab-4"><i class="fa fa-search"></i><span class="screen-reader-text"><?php _e( 'View Searchform', 'editor' ); ?></span></a>
+			</li>
 		</ul>
 
 		<div id="tabs" class="toggle-tabs">
@@ -78,6 +83,20 @@
 						<?php wp_nav_menu( array( 'theme_location' => 'social', 'depth' => 1, 'link_before' => '<span class="screen-reader-text">', 'link_after' => '</span>', 'container_class' => 'social-links', ) ); ?>
 					<?php endif; ?>
 				</div><!-- #tab-1 -->
+
+				<?php
+					$searchbar = get_theme_mod( 'editor_customizer_sidebar_search' );
+					if ( $searchbar ) 
+					{
+				?>
+						<div id="tab-4" class="tab-content fadeIn">
+							<div class="widget-area">
+								<?php the_widget( 'WP_Widget_Search' ); ?>
+							</div>
+						</div>
+				<?php
+					} 
+				?>
 
 				<!-- Featured Posts template (template-featured-posts.php) -->
 				<?php get_template_part( 'template-featured-posts' ); ?>

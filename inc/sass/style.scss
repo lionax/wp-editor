@@ -826,6 +826,7 @@ a:hover, a:focus, a:active {
 	}
 	.widget_search {
 		padding-bottom: 30px;
+		position: relative;
 	}
 	.widget_search .search-field {
 		width: 100%;
@@ -844,7 +845,19 @@ a:hover, a:focus, a:active {
 		}
 	}
 	.widget_search .search-submit {
-		display: none;
+		position: absolute;
+		font-family: "FontAwesome";
+		background: none;
+		right: 0;
+		top: 0;
+		color: black;
+		line-height: 1.5;
+		padding: 8px 15px;
+		font-size: 14px;
+		color: #aaa;
+		&:hover {
+			color: $black;
+		}
 	}
 	.featured-posts-widget {
 		border-bottom: none;

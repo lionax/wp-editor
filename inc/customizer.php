@@ -110,6 +110,16 @@ function editor_customizer_register( $wp_customize ) {
         'settings' => 'editor_featured_cat'
     ) ) );
 
+    // Show Search-Bar
+    $wp_customize->add_setting( 'editor_customizer_sidebar_search', array(
+        'default'           => true
+    ) );
+    $wp_customize->add_control( 'editor_customizer_sidebar_search', array(
+        'label'     => __( 'Show searchform in sidebar', 'editor' ),
+        'section'   => 'editor_customizer_basic',
+        'type'      => 'checkbox'
+    ) );
+
     // Color Scheme
     $wp_customize->add_setting( 'editor_customizer_sidebar_color', array(
         'default'           => 'dark',
