@@ -1353,7 +1353,7 @@ embed, iframe, object {
 	transform: translate(0px, 0px);
 	@include at-width(6.5) {
 		margin-left: 0;
-		padding: 5% 5% 5%;
+		padding: 5% 3%;
 		position: absolute;
 		width: 35%;
 		background: none;
@@ -1361,6 +1361,7 @@ embed, iframe, object {
 	}
 	@include at-width(10) {
 		width: 30%;
+		padding: 5%;
 	}
 	.dark & {
 		background: #383F49;
@@ -1456,7 +1457,7 @@ embed, iframe, object {
 		}
 	}
 	@include at-width(6.5) {
-		padding: 0 5% 4% 35%;
+		padding: 0 3% 4% 35%;
 		.site-info {
 			padding: 5%;
 		}
@@ -1503,7 +1504,7 @@ embed, iframe, object {
 		padding: 5%;
 	}
 	@include at-width(6.5) {
-		padding: 5% 5% 4% 35%;
+		padding: 5% 3% 4% 35%;
 	}
 	@include at-width(10) {
 		padding: 5% 5% 4% 30%;
