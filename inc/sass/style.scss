@@ -471,9 +471,11 @@ a:hover, a:focus, a:active {
 	font-family: $titles;
 	font-size: 0.8em;
 	text-decoration: none;
+	@include at-width(6.5) {
+		font-size: 0.9em;
+	}
 	@include at-width(10) {
 		padding: 2% 0;
-		font-size: 0.9em;
 	}
 
 	.dark & {
