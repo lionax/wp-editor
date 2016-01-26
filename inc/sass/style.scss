@@ -443,6 +443,10 @@ a:hover, a:focus, a:active {
 	color: $black;
 	@include transition;
 }
+a:before {
+	font-family: "FontAwesome";
+	padding-right: 0.3em;
+}
 
 /* --------------------------------------------------------------
 5.2 Menus
@@ -1913,6 +1917,7 @@ embed, iframe, object {
 	color:#fff;
 	display:block;
 	font-family:FontAwesome;
+	padding: 0;
 	font-size: 0.8em;
 	position:relative;
 	-webkit-transition: all .3s ease-in-out;
@@ -1940,67 +1945,67 @@ embed, iframe, object {
 	}
 }
 
-.social-links ul a[href*='wordpress.org']:before,
-.social-links ul a[href*='wordpress.com']:before {
+a[href*='wordpress.org']:before,
+a[href*='wordpress.com']:before {
 	content:'\f19a';
 }
 
-.social-links ul a[href*='facebook.com']:before {
+a[href*='facebook.com']:before {
 	content:'\f09a';
 }
 
-.social-links ul a[href*='twitter.com']:before {
+a[href*='twitter.com']:before {
 	content:'\f099';
 }
 
-.social-links ul a[href*='dribbble.com']:before {
+a[href*='dribbble.com']:before {
 	content:'\f17d';
 }
 
-.social-links ul a[href*='plus.google.com']:before {
+a[href*='plus.google.com']:before {
 	content:'\f0d5';
 }
 
-.social-links ul a[href*='pinterest.com']:before {
+a[href*='pinterest.com']:before {
 	content:'\f0d2';
 }
 
-.social-links ul a[href*='github.com']:before {
+a[href*='github.com']:before {
 	content:'\f09b';
 }
 
-.social-links ul a[href*='tumblr.com']:before {
+a[href*='tumblr.com']:before {
 	content:'\f173';
 }
 
-.social-links ul a[href*='youtube.com']:before {
+a[href*='youtube.com']:before {
 	content:'\f167';
 }
 
-.social-links ul a[href*='flickr.com']:before {
+a[href*='flickr.com']:before {
 	content:'\f16e';
 }
 
-.social-links ul a[href*='vimeo.com']:before {
+a[href*='vimeo.com']:before {
 	content:'\f194';
 }
 
-.social-links ul a[href*='instagram.com']:before {
+a[href*='instagram.com']:before {
 	content:'\f16d';
 }
 
-.social-links ul a[href*='codepen.io']:before {
+a[href*='codepen.io']:before {
 	content:'\f1cb';
 }
 
-.social-links ul a[href*='linkedin.com']:before {
+a[href*='linkedin.com']:before {
 	content:'\f0e1';
 }
 
-.social-links ul a[href*='/feed']:before {
+a[href*='/feed']:before {
 	content:'\f09e';
 }
 
-.social-links ul a[href*='mailto']:before {
+a[href*='mailto']:before {
 	content:'\f0e0';
 }
