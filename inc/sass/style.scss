@@ -471,7 +471,7 @@ a:hover, a:focus, a:active {
 	font-family: $titles;
 	font-size: 0.8em;
 	text-decoration: none;
-	@include at-width(6.5) {
+	@include at-width(3) {
 		font-size: 0.9em;
 	}
 	@include at-width(10) {
@@ -690,7 +690,9 @@ a:hover, a:focus, a:active {
 .tab-content.current {
 	display: inherit;
 }
-
+#tab-1 {
+	text-align: center;
+}
 #tab-1.current .main-navigation {
 	display: inline-block !important;
 	@include at-width(6.5) {
@@ -1387,18 +1389,26 @@ embed, iframe, object {
 		top: 46px;
 	}
 }
+.site-header-inside {
+	max-width: 20em;
+	margin: auto;
+	@include at-width(6.5) {
+		max-width: auto;
+	}
+}
 .site-branding {
 	width: 100%;
 }
 .site-logo {
-	display: none;
+	display: block;
 	width: 45%;
-	margin: 0 27.5% 20%;
+	margin: 0 auto 10%;
 	border-radius: 50%;
 	box-shadow: 2px 2px 4px #000;
 	position: relative;
 	@include at-width(6.5) {
 		display: block;
+		width: 55%;
 	}
 }
 .logo-bg {
@@ -1409,11 +1419,12 @@ embed, iframe, object {
 	left: 0;
 	padding-bottom: 60%;
 	background-size: cover !important;
-	& + .site-logo {
-		margin-top: 37.5%;
-	}
+	
 	@include at-width(6.5) {
 		display: block;
+		& + .site-logo {
+			margin-top: 32.5%;
+		}
 	}
 }
 .site-title {
