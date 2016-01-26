@@ -60,19 +60,22 @@
 			<div class="site-header-inside">
 				<!-- Logo, description and main navigation -->
 				<div id="tab-1" class="tab-content current fadeIn">
+					<?php
+						$logo_bg = get_theme_mod( 'editor_customizer_logo_bg' );
+						if ( ! empty( $logo_bg ) ) {
+					?>
+						<div class="logo-bg" style="background: url(<?php echo esc_url( $logo_bg ); ?>)"></div>
+					<?php } ?>
+					<?php
+						$logo = get_theme_mod( 'editor_customizer_logo' );
+						if ( ! empty( $logo ) ) {
+					?>
+						<img class="site-logo" src="<?php echo esc_url( $logo ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" />
+					<?php } ?>
 					<div class="site-branding">
 						<!-- Get the site branding -->
-						<?php
-							$logo = get_theme_mod( 'editor_customizer_logo' );
-							if ( ! empty( $logo ) ) {
-						?>
-							<h1 class="site-logo">
-								<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img class="site-logo" src="<?php echo esc_url( $logo ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" /></a>
-							</h1>
-						<?php } else { ?>
-							<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-							<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-						<?php } ?>
+						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+						<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 					</div>
 
 					<nav id="site-navigation" class="main-navigation" role="navigation">

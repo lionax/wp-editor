@@ -98,6 +98,17 @@ function editor_customizer_register( $wp_customize ) {
 		'settings' => 'editor_customizer_logo'
 	) ) );
 
+    // Logo Image Background Upload
+    $wp_customize->add_setting( 'editor_customizer_logo_bg', array(
+        'sanitize_callback' => 'esc_url_raw'
+    ) );
+
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'editor_customizer_logo_bg', array(
+        'label'    => __( 'Logo-Background Upload', 'editor' ),
+        'section'  => 'editor_customizer_basic',
+        'settings' => 'editor_customizer_logo_bg'
+    ) ) );
+
     // Featured Category Dropdown
     $wp_customize->add_setting( 'editor_featured_cat', array(
         'default'           => '0',

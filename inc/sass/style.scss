@@ -1389,7 +1389,30 @@ embed, iframe, object {
 	width: 100%;
 }
 .site-logo {
-	margin: 0;
+	display: none;
+	width: 45%;
+	margin: 0 27.5% 20%;
+	border-radius: 50%;
+	box-shadow: 2px 2px 4px #000;
+	position: relative;
+	@include at-width(6.5) {
+		display: block;
+	}
+}
+.logo-bg {
+	display: none;
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	padding-bottom: 60%;
+	background-size: cover !important;
+	& + .site-logo {
+		margin-top: 37.5%;
+	}
+	@include at-width(6.5) {
+		display: block;
+	}
 }
 .site-title {
 	font-family: $titles;
