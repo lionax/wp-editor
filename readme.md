@@ -137,6 +137,12 @@ Leave an issue at the github repo github.de/lionax/wp-wedge.
 Or leave a comment at the blog post on 8api.de.
 Questions on features before Version 1.0 can be answered by the great people at the support forum of array.is.
 
+## Development
+
+If you want to develop on this theme you need a sass compiler, since this theme uses the sass language for preprocessing the css.
+
+Further I recommend to install the node.js node mq-packer which is a media query merger. Since media queries are nested within the styles for better understanding and logical consistency of the code, not merging them would generate approximately twice the size as necessary.
+
 ## Change Log
 **1.0.0 - 26.01.2016**
 Initial release of wedge
