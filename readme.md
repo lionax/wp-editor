@@ -144,6 +144,9 @@ If you want to develop on this theme you need a sass compiler, since this theme 
 Further I recommend to install the node.js node mq-packer which is a media query merger. Since media queries are nested within the styles for better understanding and logical consistency of the code, not merging them would generate approximately twice the size as necessary.
 
 ## Change Log
+**1.1.1 - 27.01.2016**
+* changed the author name in footer
+
 **1.1.0 - 27.01.2016**
 * added development information to the readme
 * fixed missing logo background option in customizer
