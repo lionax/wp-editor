@@ -3,7 +3,7 @@ Contributors: 8api, array, okaythemes
 Tags: light, white, gray, two-columns, left-sidebar, responsive-layout, custom-colors, editor-style, featured-images, theme-options, threaded-comments, translation-ready, photoblogging, 
 Requires at least: 3.8
 Tested up to: 4.4.1
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Screenshot image license: GPLv2 or later
@@ -144,6 +144,12 @@ If you want to develop on this theme you need a sass compiler, since this theme 
 Further I recommend to install the node.js node mq-packer which is a media query merger. Since media queries are nested within the styles for better understanding and logical consistency of the code, not merging them would generate approximately twice the size as necessary.
 
 ## Change Log
+**1.1.0 - 27.01.2016**
+* added development information to the readme
+* fixed missing logo background option in customizer
+* fixed striped theme comment by sass compiler
+* replaced the screenshot of editor with one of wedge
+
 **1.0.0 - 26.01.2016**
 Initial release of Wedge Wordpress Theme
 
