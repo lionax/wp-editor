@@ -14,7 +14,7 @@
 		<div class="site-info">
 			<a class="powered-by" href="<?php echo esc_url( __( 'http://wordpress.org/', 'wedge' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'wedge' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s', 'wedge' ), 'wedge', '<a href="https://array.is/">Array</a>' ); ?>
+			<?php printf( __( 'Theme: %1$s by %2$s', 'wedge' ), 'wedge', '<a href="https://8api.de/">Alex W.</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
