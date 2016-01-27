@@ -82,10 +82,15 @@ function wedge_sanitize_scheme_select( $input ) {
  */
 function wedge_customizer_register( $wp_customize ) {
 
-	$wp_customize->add_section( 'wedge_customizer_basic', array(
-		'title'    => __( 'Theme Options', 'wedge' ),
-		'priority' => 1
+	$wp_customize->add_section( 'wedge_customizer_aside', array(
+		'title'    => __( 'Aside', 'wedge' ),
+		'priority' => 90
 	) );
+
+    $wp_customize->add_section( 'wedge_customizer_basic', array(
+        'title'    => __( 'Theme Options', 'wedge' ),
+        'priority' => 150
+    ) );
 
 	// Logo Image Upload
 	$wp_customize->add_setting( 'wedge_customizer_logo', array(
@@ -94,9 +99,29 @@ function wedge_customizer_register( $wp_customize ) {
 
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'wedge_customizer_logo', array(
 		'label'    => __( 'Logo Upload', 'wedge' ),
-		'section'  => 'wedge_customizer_basic',
+		'section'  => 'title_tagline',
 		'settings' => 'wedge_customizer_logo'
 	) ) );
+
+    // Hide Title?
+    $wp_customize->add_setting( 'wedge_customizer_hide_title', array(
+        'default'           => false
+    ) );
+    $wp_customize->add_control( 'wedge_customizer_hide_title', array(
+        'label'     => __( 'Hide the Title', 'wedge' ),
+        'section'   => 'title_tagline',
+        'type'      => 'checkbox'
+    ) );
+
+    // Hide Description?
+    $wp_customize->add_setting( 'wedge_customizer_hide_desc', array(
+        'default'           => false
+    ) );
+    $wp_customize->add_control( 'wedge_customizer_hide_desc', array(
+        'label'     => __( 'Hide the Description', 'wedge' ),
+        'section'   => 'title_tagline',
+        'type'      => 'checkbox'
+    ) );
 
     // Logo Image Background Upload
     $wp_customize->add_setting( 'wedge_customizer_logo_bg', array(
@@ -105,9 +130,20 @@ function wedge_customizer_register( $wp_customize ) {
 
     $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'wedge_customizer_logo_bg', array(
         'label'    => __( 'Logo-Background Upload', 'wedge' ),
-        'section'  => 'wedge_customizer_basic',
+        'section'  => 'header_image',
         'settings' => 'wedge_customizer_logo_bg'
     ) ) );
+
+    // Show Search-Bar
+    $wp_customize->add_setting( 'wedge_customizer_sidebar_search', array(
+        'default'           => true
+    ) );
+    $wp_customize->add_control( 'wedge_customizer_sidebar_search', array(
+
+        'label'     => __( 'Show searchform in sidebar', 'wedge' ),
+        'section'   => 'wedge_customizer_aside',
+        'type'      => 'checkbox'
+    ) );
 
     // Featured Category Dropdown
     $wp_customize->add_setting( 'wedge_featured_cat', array(
@@ -116,33 +152,22 @@ function wedge_customizer_register( $wp_customize ) {
     ) );
 
     $wp_customize->add_control( new WP_Customize_Category_Control( $wp_customize, 'wedge_featured_cat', array(
-        'label'    => __( 'Sidebar Featured Post Category', 'wedge' ),
-        'section'  => 'wedge_customizer_basic',
+        'label'    => __( 'Featured Post Category', 'wedge' ),
+        'section'  => 'wedge_customizer_aside',
         'settings' => 'wedge_featured_cat'
     ) ) );
 
-    // Show Search-Bar
-    $wp_customize->add_setting( 'wedge_customizer_sidebar_search', array(
-        'default'           => true
-    ) );
-    $wp_customize->add_control( 'wedge_customizer_sidebar_search', array(
-        'label'     => __( 'Show searchform in sidebar', 'wedge' ),
-        'section'   => 'wedge_customizer_basic',
-        'type'      => 'checkbox'
-    ) );
-
     // Color Scheme
     $wp_customize->add_setting( 'wedge_customizer_sidebar_color', array(
-        'default'           => 'dark',
+        'default'           => 'light',
         'capability'        => 'edit_theme_options',
-        'type'              => 'option',
         'sanitize_callback' => 'wedge_sanitize_scheme_select'
     ));
 
     $wp_customize->add_control( 'wedge_customizer_sidebar_color_select', array(
         'settings' => 'wedge_customizer_sidebar_color',
         'label'    => __( 'Sidebar Color', 'wedge' ),
-        'section'  => 'wedge_customizer_basic',
+        'section'  => 'colors',
         'type'     => 'select',
         'choices'  => array(
             'dark'     => __( 'Dark', 'wedge' ),

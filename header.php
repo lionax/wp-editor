@@ -60,23 +60,29 @@
 			<div class="site-header-inside">
 				<!-- Logo, description and main navigation -->
 				<div id="tab-1" class="tab-content current fadeIn">
-					<?php
-						$logo_bg = get_theme_mod( 'wedge_customizer_logo_bg' );
-						if ( ! empty( $logo_bg ) ) {
-					?>
+					
+					<?php if ( ! empty( $logo_bg ) ) { ?>
 						<div class="logo-bg" style="background: url(<?php echo esc_url( $logo_bg ); ?>)"></div>
 					<?php } ?>
-					<?php
-						$logo = get_theme_mod( 'wedge_customizer_logo' );
-						if ( ! empty( $logo ) ) {
-					?>
+					
+					<?php if ( ! empty( $logo ) ) {	?>
 						<img class="site-logo" src="<?php echo esc_url( $logo ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" />
 					<?php } ?>
+					
+					<?php if ( !$hide_title || !$hide_desc ) { ?>
 					<div class="site-branding">
 						<!-- Get the site branding -->
+
+						<?php if ( !$hide_title ) { ?>
 						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+						<?php } ?>
+
+						<?php if ( !$hide_desc ) { ?>
 						<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+						<?php } ?>
+
 					</div>
+					<?php } ?>
 
 					<nav id="site-navigation" class="main-navigation" role="navigation">
 						<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
