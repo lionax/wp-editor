@@ -123,7 +123,7 @@ Copyright: @davegandy
 1. Sign into your WordPress dashboard, go to Appearance > Themes, and click Add New.
 2. Click Add New.
 3. Click Upload.
-4. Click Choose File and select the theme zip file you downloaded from Array.
+4. Click Choose File and select the theme zip file you downloaded from Github.
 5. Click Install Now.
 6. Click Add New, then click Upload, then click Choose File.
 7. After WordPress installs the theme, click Activate.
@@ -145,7 +145,7 @@ Further I recommend to install the node.js node mq-packer which is a media query
 
 ## Change Log
 **1.0.0 - 26.01.2016**
-Initial release of wedge
+Initial release of Wedge Wordpress Theme
 
 ## Changes from Editor to Wedge
 * moved some customizer settings to existing panels and sections
