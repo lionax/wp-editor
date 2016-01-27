@@ -1,6 +1,6 @@
 # Wedge WordPress Theme
 Contributors: 8api, array, okaythemes
-Tags: light, white, gray, two-columns, left-sidebar, responsive-layout, custom-colors, wedge-style, featured-images, theme-options, threaded-comments, translation-ready, photoblogging
+Tags: light, white, gray, two-columns, left-sidebar, responsive-layout, custom-colors, editor-style, featured-images, theme-options, threaded-comments, translation-ready, photoblogging, 
 Requires at least: 3.8
 Tested up to: 4.4.1
 Stable tag: 1.0.0
@@ -10,13 +10,13 @@ Screenshot image license: GPLv2 or later
 
 ## Description
 
-Prior to this fork called the Editor theme by Array.io. Make sure to check out their nice website [array.io](https://array.io)
+Wedge is build apon the theme Editor by Array.io. Make sure to check out their nice website [array.io](https://array.io)
 
 Wedge puts bold and beautiful publishing right at your fingertips with comfortable, legible typography and large featured images. Using Featured Posts, you can display your favorite articles or wedgeials in the sidebar for even more exposure.
 
 ----------
 
-### Getting started with Wedge WordPress Theme
+## Getting started with Wedge WordPress Theme
 
 **Using the Theme Customizer**
 You can change Wedge’s theme options via the Customizer.
@@ -42,8 +42,8 @@ You’ll need to create at least one new menu for the header.
 
 ----------
 
-### Installing Jetpack
-Jetpack is a WordPress plugin by Automattic, the folks who make WordPress. It’s a toolkit that provides various features and enhancements to your WordPress site. Wedge utilizes several features (infinite scroll, carousel, etc.) of Jetpack, and must be installed for the theme to work as you see in the demo.
+### Partial Jetpack-Support
+Jetpack is a WordPress plugin by Automattic, the folks who make WordPress. It’s a toolkit that provides various features and enhancements to your WordPress site. Wedge utilizes several features (infinite scroll, carousel, etc.) of Jetpack.
 
 * Install Jetpack by going to Plugins → Add New and search for “Jetpack”. Install and activate the plugin. Once installed, you can enable Jetpack by
 * After activating Jetpack by WordPress.com, you will be asked to connect to WordPress.com to enable the Jetpack features.
@@ -76,11 +76,6 @@ The widget section of Wedge is located in the sidebar as last section. You can v
 
 ----------
 
-### Featured Posts Section
-One can select a specific post category as featured category. If selected it will be located after the search panel.
-
-----------
-
 ### Creating Media Posts
 Wedge makes it easy to share your images, videos, and quotes.
 
@@ -93,7 +88,7 @@ Wedge makes it easy to share your images, videos, and quotes.
 
 **Quote Post**
 
-* Create a new post and add a title and add your quote to the wedge.
+* Create a new post and add a title and add your quote to the editor.
 * Add a quote citation by adding a name and wrapping it in a tag. See an example.
 * On the right hand side of your page, you’ll see the Format pane. Click Quote to set the post format.
 * Once you’ve added your quote and selected the Quote format you can publish and preview your post.
@@ -144,7 +139,26 @@ Questions on features before Version 1.0 can be answered by the great people at 
 
 ## Change Log
 **1.0.0 - 26.01.2016**
+Initial release of wedge
 
+## Changes from Editor to Wedge
+* moved some customizer settings to existing panels and sections
+* added new customizer settings for hiding title and description
+* renamed everything to the new name wedge so it won't get confusing
+* added corporate icons before each link on the page
+* implemented a new logo and header background image
+* added a new custom searchform to the aside section
+* implemented my adaptivestyles lib
+* fixed that social icons could disappear on resize
+* added a min-width to the site
+* improvements on small screens
+* started converting px font-sizes to ems.
+* converted the css to the mobile first approach
+* fixed social icons on dark color profile
+* added css files to gitignore - they will be build on release
+* moved imports to the top of style.scss
+* changed file names of sass files to sass conventions
+* added a compass compile config
 
 ## Change Log (Prior to Wedge 1.0: Editor)
 **1.1.3 - 9/16/15**
