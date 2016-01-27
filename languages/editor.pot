@@ -2,7 +2,7 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Editor\n"
+"Project-Id-Version: Wedge\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2014-12-16 16:27-0600\n"
 "PO-Revision-Date: 2014-12-16 16:28-0600\n"

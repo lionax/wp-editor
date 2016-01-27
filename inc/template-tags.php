@@ -4,29 +4,29 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package Editor
+ * @package Wedge
  */
 
-if ( ! function_exists( 'editor_paging_nav' ) ) :
+if ( ! function_exists( 'wedge_paging_nav' ) ) :
 /**
  * Display navigation to next/previous set of posts when applicable.
  */
-function editor_paging_nav() {
+function wedge_paging_nav() {
 	// Don't print empty markup if there's only one page.
 	if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
 		return;
 	}
 	?>
 	<nav class="navigation paging-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'editor' ); ?></h1>
+		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'wedge' ); ?></h1>
 		<div class="nav-links">
 
 			<?php if ( get_next_posts_link() ) : ?>
-				<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav"><i class="fa fa-arrow-circle-o-left"></i> Older posts</span>', 'editor' ) ); ?></div>
+				<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav"><i class="fa fa-arrow-circle-o-left"></i> Older posts</span>', 'wedge' ) ); ?></div>
 			<?php endif; ?>
 
 			<?php if ( get_previous_posts_link() ) : ?>
-				<div class="nav-next"><?php previous_posts_link( __( '<span class="meta-nav">Newer posts <i class="fa fa-arrow-circle-o-right"></i></span>', 'editor' ) ); ?></div>
+				<div class="nav-next"><?php previous_posts_link( __( '<span class="meta-nav">Newer posts <i class="fa fa-arrow-circle-o-right"></i></span>', 'wedge' ) ); ?></div>
 			<?php endif; ?>
 
 		</div><!-- .nav-links -->
@@ -35,11 +35,11 @@ function editor_paging_nav() {
 }
 endif;
 
-if ( ! function_exists( 'editor_post_nav' ) ) :
+if ( ! function_exists( 'wedge_post_nav' ) ) :
 /**
  * Display navigation to next/previous post when applicable.
  */
-function editor_post_nav() {
+function wedge_post_nav() {
 	// Don't print empty markup if there's nowhere to navigate.
 	$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
 	$next     = get_adjacent_post( false, '', false );
@@ -49,11 +49,11 @@ function editor_post_nav() {
 	}
 	?>
 	<nav class="navigation post-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'editor' ); ?></h1>
+		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'wedge' ); ?></h1>
 		<div class="nav-links">
 			<?php
-				previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr; Previous Post</span> %title', 'Previous post link', 'editor' ) );
-				next_post_link(     '<div class="nav-next">%link</div>',     _x( '<span class="meta-nav">Next Post &rarr;</span> %title', 'Next post link',     'editor' ) );
+				previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr; Previous Post</span> %title', 'Previous post link', 'wedge' ) );
+				next_post_link(     '<div class="nav-next">%link</div>',     _x( '<span class="meta-nav">Next Post &rarr;</span> %title', 'Next post link',     'wedge' ) );
 			?>
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->
@@ -61,11 +61,11 @@ function editor_post_nav() {
 }
 endif;
 
-if ( ! function_exists( 'editor_posted_on' ) ) :
+if ( ! function_exists( 'wedge_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
  */
-function editor_posted_on() {
+function wedge_posted_on() {
 	$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 		$time_string .= '<time class="updated" datetime="%3$s">%4$s</time>';
@@ -78,7 +78,7 @@ function editor_posted_on() {
 		esc_html( get_the_modified_date() )
 	);
 
-	printf( __( '<span class="posted-on">%1$s</span><span class="byline"> by </span> %2$s', 'editor' ),
+	printf( __( '<span class="posted-on">%1$s</span><span class="byline"> by </span> %2$s', 'wedge' ),
 		sprintf( '<a href="%1$s" rel="bookmark">%2$s</a>',
 			esc_url( get_permalink() ),
 			$time_string
@@ -91,13 +91,13 @@ function editor_posted_on() {
 }
 endif;
 
-if ( ! function_exists( 'editor_comment' ) ) :
+if ( ! function_exists( 'wedge_comment' ) ) :
 /**
  * Template for comments and pingbacks.
  *
  * Used as a callback by wp_list_comments() for displaying the comments.
  */
-function editor_comment( $comment, $args, $depth ) {
+function wedge_comment( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment; ?>
 <li <?php comment_class( 'clear' ); ?> id="li-comment-<?php comment_ID() ?>">
 
@@ -107,8 +107,8 @@ function editor_comment( $comment, $args, $depth ) {
 
 		<div class="comment-wrap">
 			<footer class="comment-info">
-				<?php printf( __( '<cite class="comment-cite">%s</cite>', 'editor' ), get_comment_author_link() ) ?>
-				<a class="comment-time" href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ) ?>"><?php printf( __( '%1$s at %2$s', 'editor' ), get_comment_date(), get_comment_time() ) ?></a><?php edit_comment_link( __( '(Edit)', 'editor' ), '  ', '' ) ?>
+				<?php printf( __( '<cite class="comment-cite">%s</cite>', 'wedge' ), get_comment_author_link() ) ?>
+				<a class="comment-time" href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ) ?>"><?php printf( __( '%1$s at %2$s', 'wedge' ), get_comment_date(), get_comment_time() ) ?></a><?php edit_comment_link( __( '(Edit)', 'wedge' ), '  ', '' ) ?>
 			</footer>
 
 			<div class="comment-content">
@@ -119,23 +119,23 @@ function editor_comment( $comment, $args, $depth ) {
 			</div>
 
 			<?php if ( $comment->comment_approved == '0' ) : ?>
-				<em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'editor' ) ?></em>
+				<em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'wedge' ) ?></em>
 			<?php endif; ?>
 		</div>
 	</article>
 <?php
 }
-endif; // ends check for editor_comment
+endif; // ends check for wedge_comment
 
 /**
  * Returns true if a blog has more than 1 category.
  *
  * @return bool
  */
-function editor_categorized_blog() {
-	if ( false === ( $editor_count_cats = get_transient( 'editor_categories' ) ) ) {
+function wedge_categorized_blog() {
+	if ( false === ( $wedge_count_cats = get_transient( 'wedge_categories' ) ) ) {
 		// Create an array of all the categories that are attached to posts.
-		$editor_count_cats = get_categories( array(
+		$wedge_count_cats = get_categories( array(
 			'fields'     => 'ids',
 			'hide_empty' => 1,
 
@@ -144,25 +144,25 @@ function editor_categorized_blog() {
 		) );
 
 		// Count the number of categories that are attached to the posts.
-		$editor_count_cats = count( $editor_count_cats );
+		$wedge_count_cats = count( $wedge_count_cats );
 
-		set_transient( 'editor_categories', $editor_count_cats );
+		set_transient( 'wedge_categories', $wedge_count_cats );
 	}
 
-	if ( $editor_count_cats > 1 ) {
-		// This blog has more than 1 category so editor_categorized_blog should return true.
+	if ( $wedge_count_cats > 1 ) {
+		// This blog has more than 1 category so wedge_categorized_blog should return true.
 		return true;
 	} else {
-		// This blog has only 1 category so editor_categorized_blog should return false.
+		// This blog has only 1 category so wedge_categorized_blog should return false.
 		return false;
 	}
 }
 
 /**
- * Flush out the transients used in editor_categorized_blog.
+ * Flush out the transients used in wedge_categorized_blog.
  */
-function editor_category_transient_flusher() {
-	delete_transient( 'editor_categories' );
+function wedge_category_transient_flusher() {
+	delete_transient( 'wedge_categories' );
 }
-add_action( 'edit_category', 'editor_category_transient_flusher' );
-add_action( 'save_post',     'editor_category_transient_flusher' );
+add_action( 'edit_category', 'wedge_category_transient_flusher' );
+add_action( 'save_post',     'wedge_category_transient_flusher' );

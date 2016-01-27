@@ -4,9 +4,9 @@
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package Editor
+ * @package Wedge
  */
-	$editor_color = get_option( 'editor_customizer_sidebar_color' );
+	$wedge_color = get_option( 'wedge_customizer_sidebar_color' );
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -21,38 +21,38 @@
 
 <body <?php body_class(); ?>>
 
-<div id="page" class="hfeed site container <?php echo $editor_color ?>">
+<div id="page" class="hfeed site container <?php echo $wedge_color ?>">
 
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'editor' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'wedge' ); ?></a>
 
 	<!-- Get sidebar color option (Appearance -> Customize -> Theme Options) -->
 	<?php
-		$editor_sidebar_color = get_option( 'editor_customizer_sidebar_color' );
-		$editor_featured_cat = get_theme_mod( 'editor_featured_cat' );
+		$wedge_sidebar_color = get_option( 'wedge_customizer_sidebar_color' );
+		$wedge_featured_cat = get_theme_mod( 'wedge_featured_cat' );
 	?>
-	<header id="masthead" class="site-header <?php echo $editor_sidebar_color; ?>" role="banner">
+	<header id="masthead" class="site-header <?php echo $wedge_sidebar_color; ?>" role="banner">
 		<!-- Tab navigation -->
 		<ul class="toggle-bar" role="tablist">
 			<!-- Main navigation -->
 			<li id="panel-1" class="current" role="presentation">
-				<a href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true" class="current nav-toggle" data-tab="tab-1"><i class="fa fa-bars"></i><span class="screen-reader-text"><?php _e( 'View menu', 'editor' ); ?></span></a>
+				<a href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true" class="current nav-toggle" data-tab="tab-1"><i class="fa fa-bars"></i><span class="screen-reader-text"><?php _e( 'View menu', 'wedge' ); ?></span></a>
 			</li>
 
 			<!-- Featured Posts navigation -->
-			<?php if( $editor_featured_cat && $editor_featured_cat !== '0' ) { ?>
+			<?php if( $wedge_featured_cat && $wedge_featured_cat !== '0' ) { ?>
 				<li id="panel-2" role="presentation">
-					<a href="#tab-2" role="tab" aria-controls="tab-2" aria-selected="false" data-tab="tab-2"><i class="fa fa-thumb-tack"></i><span class="screen-reader-text"><?php _e( 'View featured posts', 'editor' ); ?></span></a>
+					<a href="#tab-2" role="tab" aria-controls="tab-2" aria-selected="false" data-tab="tab-2"><i class="fa fa-thumb-tack"></i><span class="screen-reader-text"><?php _e( 'View featured posts', 'wedge' ); ?></span></a>
 				</li>
 			<?php } ?>
 
 			<!-- Sidebar widgets navigation -->
 			<li id="panel-3" role="presentation">
-				<a href="#tab-3" role="tab" aria-controls="tab-3" aria-selected="false" class="folder-toggle" data-tab="tab-3"><i class="fa fa-folder"></i><i class="fa fa-folder-open"></i><span class="screen-reader-text"><?php _e( 'View sidebar', 'editor' ); ?></span></a>
+				<a href="#tab-3" role="tab" aria-controls="tab-3" aria-selected="false" class="folder-toggle" data-tab="tab-3"><i class="fa fa-folder"></i><i class="fa fa-folder-open"></i><span class="screen-reader-text"><?php _e( 'View sidebar', 'wedge' ); ?></span></a>
 			</li>
 
 			<!-- Searchform -->
 			<li id="panel-3" role="presentation">
-				<a href="#tab-4" role="tab" aria-controls="tab-4" aria-selected="false" class="folder-toggle" data-tab="tab-4"><i class="fa fa-search"></i><span class="screen-reader-text"><?php _e( 'View Searchform', 'editor' ); ?></span></a>
+				<a href="#tab-4" role="tab" aria-controls="tab-4" aria-selected="false" class="folder-toggle" data-tab="tab-4"><i class="fa fa-search"></i><span class="screen-reader-text"><?php _e( 'View Searchform', 'wedge' ); ?></span></a>
 			</li>
 		</ul>
 
@@ -61,13 +61,13 @@
 				<!-- Logo, description and main navigation -->
 				<div id="tab-1" class="tab-content current fadeIn">
 					<?php
-						$logo_bg = get_theme_mod( 'editor_customizer_logo_bg' );
+						$logo_bg = get_theme_mod( 'wedge_customizer_logo_bg' );
 						if ( ! empty( $logo_bg ) ) {
 					?>
 						<div class="logo-bg" style="background: url(<?php echo esc_url( $logo_bg ); ?>)"></div>
 					<?php } ?>
 					<?php
-						$logo = get_theme_mod( 'editor_customizer_logo' );
+						$logo = get_theme_mod( 'wedge_customizer_logo' );
 						if ( ! empty( $logo ) ) {
 					?>
 						<img class="site-logo" src="<?php echo esc_url( $logo ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" />
@@ -88,7 +88,7 @@
 				</div><!-- #tab-1 -->
 
 				<?php
-					$searchbar = get_theme_mod( 'editor_customizer_sidebar_search' );
+					$searchbar = get_theme_mod( 'wedge_customizer_sidebar_search' );
 					if ( $searchbar ) 
 					{
 				?>

@@ -1,6 +1,6 @@
 <?php
 /**
- * @package Editor
+ * @package Wedge
  */
 ?>
 
@@ -13,7 +13,7 @@
 	<header class="entry-header">
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-date">
-			<?php editor_posted_on(); ?>
+			<?php wedge_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 

@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Editor
+ * @package Wedge
  */
 
 get_header(); ?>
@@ -23,54 +23,54 @@ get_header(); ?>
 				<h1 class="page-title">
 					<?php
 						if ( is_category() ) :
-							_e( 'Category / ', 'editor' );
+							_e( 'Category / ', 'wedge' );
 							single_cat_title();
 
 						elseif ( is_tag() ) :
-							_e( 'Tag / ', 'editor' );
+							_e( 'Tag / ', 'wedge' );
 							single_tag_title();
 
 						elseif ( is_author() ) :
-							printf( __( '<span>Author /</span> %s', 'editor' ), '<span class="vcard">' . get_the_author() . '</span>' );
+							printf( __( '<span>Author /</span> %s', 'wedge' ), '<span class="vcard">' . get_the_author() . '</span>' );
 
 						elseif ( is_day() ) :
-							printf( __( 'Day / %s', 'editor' ), '<span>' . get_the_date() . '</span>' );
+							printf( __( 'Day / %s', 'wedge' ), '<span>' . get_the_date() . '</span>' );
 
 						elseif ( is_month() ) :
-							printf( __( 'Month / %s', 'editor' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'editor' ) ) . '</span>' );
+							printf( __( 'Month / %s', 'wedge' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'wedge' ) ) . '</span>' );
 
 						elseif ( is_year() ) :
-							printf( __( 'Year / %s', 'editor' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'editor' ) ) . '</span>' );
+							printf( __( 'Year / %s', 'wedge' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'wedge' ) ) . '</span>' );
 
 						elseif ( is_tax( 'post_format', 'post-format-aside' ) ) :
-							_e( 'Asides', 'editor' );
+							_e( 'Asides', 'wedge' );
 
 						elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) :
-							_e( 'Galleries', 'editor');
+							_e( 'Galleries', 'wedge');
 
 						elseif ( is_tax( 'post_format', 'post-format-image' ) ) :
-							_e( 'Images', 'editor');
+							_e( 'Images', 'wedge');
 
 						elseif ( is_tax( 'post_format', 'post-format-video' ) ) :
-							_e( 'Videos', 'editor' );
+							_e( 'Videos', 'wedge' );
 
 						elseif ( is_tax( 'post_format', 'post-format-quote' ) ) :
-							_e( 'Quotes', 'editor' );
+							_e( 'Quotes', 'wedge' );
 
 						elseif ( is_tax( 'post_format', 'post-format-link' ) ) :
-							_e( 'Links', 'editor' );
+							_e( 'Links', 'wedge' );
 
 						elseif ( is_tax( 'post_format', 'post-format-status' ) ) :
-							_e( 'Statuses', 'editor' );
+							_e( 'Statuses', 'wedge' );
 
 						elseif ( is_tax( 'post_format', 'post-format-audio' ) ) :
-							_e( 'Audios', 'editor' );
+							_e( 'Audios', 'wedge' );
 
 						elseif ( is_tax( 'post_format', 'post-format-chat' ) ) :
-							_e( 'Chats', 'editor' );
+							_e( 'Chats', 'wedge' );
 
 						else :
-							_e( 'Archives', 'editor' );
+							_e( 'Archives', 'wedge' );
 
 						endif;
 					?>
@@ -90,11 +90,11 @@ get_header(); ?>
 					<header class="author-info">
 							<div class="author-profile">
 								<div class="author-avatar">
-									<?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'editor_author_bio_avatar_size', 100 ) ); ?>
+									<?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'wedge_author_bio_avatar_size', 100 ) ); ?>
 								</div>
 
 								<div class="author-description">
-									<h2><?php printf( __( 'Posts by %s', 'editor' ), get_the_author() ); ?></h2>
+									<h2><?php printf( __( 'Posts by %s', 'wedge' ), get_the_author() ); ?></h2>
 									<?php the_author_meta( 'description' ); ?>
 								</div>
 							</div>
@@ -115,7 +115,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php editor_paging_nav(); ?>
+			<?php wedge_paging_nav(); ?>
 
 		<?php else : ?>
 

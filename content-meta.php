@@ -2,7 +2,7 @@
 /**
  * The template part for displaying the post meta information
  *
- * @package Editor
+ * @package Wedge
  */
 ?>
 
@@ -22,9 +22,9 @@
 		<?php } ?>
 		<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
 		<li class="meta-comment">
-			<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'editor' ), __( '1 Comment', 'editor' ), __( '% Comments', 'editor' ) ); ?></span>
+			<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'wedge' ), __( '1 Comment', 'wedge' ), __( '% Comments', 'wedge' ) ); ?></span>
 		</li>
 		<?php endif; ?>
-		<?php edit_post_link( __( 'Edit', 'editor' ), '<li class="meta-edit">', '</li>' ); ?>
+		<?php edit_post_link( __( 'Edit', 'wedge' ), '<li class="meta-edit">', '</li>' ); ?>
 	</ul>
 </div>

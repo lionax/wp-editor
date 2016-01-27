@@ -1,8 +1,8 @@
 <?php
 /**
- * Editor functions and definitions
+ * Wedge functions and definitions
  *
- * @package Editor
+ * @package Wedge
  */
 
 /**
@@ -12,16 +12,16 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 730; /* pixels */
 }
 
-if ( ! function_exists( 'editor_setup' ) ) :
+if ( ! function_exists( 'wedge_setup' ) ) :
 /**
- * Sets up Editor's defaults and registers support for various WordPress features.
+ * Sets up Wedge's defaults and registers support for various WordPress features.
  */
-function editor_setup() {
+function wedge_setup() {
 
 	/*
 	 * Make theme available for translation.
 	 */
-	load_theme_textdomain( 'editor', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'wedge', get_template_directory() . '/languages' );
 
 	/**
      * Add default posts and comments RSS feed links to head.
@@ -47,8 +47,8 @@ function editor_setup() {
      * Register Navigation menu
      */
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'editor' ),
-		'social'  => __( 'Social Links', 'editor' ),
+		'primary' => __( 'Primary Menu', 'wedge' ),
+		'social'  => __( 'Social Links', 'wedge' ),
 	) );
 
 	/**
@@ -59,7 +59,7 @@ function editor_setup() {
 	/**
      * Custom background feature
      */
-	add_theme_support( 'custom-background', apply_filters( 'editor_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'wedge_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
@@ -74,17 +74,17 @@ function editor_setup() {
 		'gallery',
 	) );
 }
-endif; // editor_setup
-add_action( 'after_setup_theme', 'editor_setup' );
+endif; // wedge_setup
+add_action( 'after_setup_theme', 'wedge_setup' );
 
 /**
  * Register widget area.
  *
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
-function editor_widgets_init() {
+function wedge_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'editor' ),
+		'name'          => __( 'Sidebar', 'wedge' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -93,12 +93,12 @@ function editor_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 }
-add_action( 'widgets_init', 'editor_widgets_init' );
+add_action( 'widgets_init', 'wedge_widgets_init' );
 
 /**
  * Return the Google font stylesheet URL
  */
-function editor_fonts_url() {
+function wedge_fonts_url() {
 
 	$fonts_url = '';
 
@@ -106,13 +106,13 @@ function editor_fonts_url() {
 	 * supported by Source Sans Pro, translate this to 'off'. Do not translate
 	 * into your own language.
 	 */
-	$source_sans_pro = _x( 'on', 'Source Sans Pro font: on or off', 'editor' );
+	$source_sans_pro = _x( 'on', 'Source Sans Pro font: on or off', 'wedge' );
 
 	/* Translators: If there are characters in your language that are not
 	 * supported by Roboto Condensed, translate this to 'off'. Do not translate
 	 * into your own language.
 	 */
-	$roboto_condensed = _x( 'on', 'Roboto Condensed font: on or off', 'editor' );
+	$roboto_condensed = _x( 'on', 'Roboto Condensed font: on or off', 'wedge' );
 
 	if ( 'off' !== $source_sans_pro || 'off' !== $roboto_condensed ) {
 		$font_families = array();
@@ -136,13 +136,13 @@ function editor_fonts_url() {
 /**
  * Enqueue scripts and styles.
  */
-function editor_scripts() {
-	wp_enqueue_style( 'editor-style', get_stylesheet_uri() );
+function wedge_scripts() {
+	wp_enqueue_style( 'wedge-style', get_stylesheet_uri() );
 
 	/**
      * FontAwesome Icons Stylesheet
      */
-	wp_enqueue_style( 'editor-font-awesome-css', get_template_directory_uri() . "/inc/fontawesome/font-awesome.css", array(), '4.1.0', 'screen' );
+	wp_enqueue_style( 'wedge-font-awesome-css', get_template_directory_uri() . "/inc/fontawesome/font-awesome.css", array(), '4.1.0', 'screen' );
 
 	/**
      * Conditionally load our stylesheet for Internet Explorer. Yuck!
@@ -158,14 +158,14 @@ function editor_scripts() {
 	wp_enqueue_script( 'fitvids', get_template_directory_uri() . '/js/jquery.fitvids.js', array( 'jquery' ), '20140820', true );
 
 	/**
-     * Load Editor's javascript
+     * Load Wedge's javascript
      */
-	wp_enqueue_script( 'editor-js', get_template_directory_uri() . '/js/editor.js', array(), '20120206', true );
+	wp_enqueue_script( 'wedge-js', get_template_directory_uri() . '/js/wedge.js', array(), '20120206', true );
 
 	/**
      * Load Roboto Condensed and Sans Source Pro from Google
      */
-	wp_enqueue_style( 'editor-fonts', editor_fonts_url(), array(), null );
+	wp_enqueue_style( 'wedge-fonts', wedge_fonts_url(), array(), null );
 
 	/**
      * Load the comment reply script
@@ -174,16 +174,16 @@ function editor_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'editor_scripts' );
+add_action( 'wp_enqueue_scripts', 'wedge_scripts' );
 
-/* Enqueue Google fonts style to admin for editor styles */
-function editor_admin_fonts( $hook_suffix ) {
-	wp_enqueue_style( 'editor-fonts', editor_fonts_url(), array(), null );
+/* Enqueue Google fonts style to admin for wedge styles */
+function wedge_admin_fonts( $hook_suffix ) {
+	wp_enqueue_style( 'wedge-fonts', wedge_fonts_url(), array(), null );
 }
-add_action( 'admin_enqueue_scripts', 'editor_admin_fonts' );
+add_action( 'admin_enqueue_scripts', 'wedge_admin_fonts' );
 
 /**
- * Custom template tags for Editor.
+ * Custom template tags for Wedge.
  */
 require get_template_directory() . '/inc/template-tags.php';
 
@@ -205,16 +205,16 @@ require get_template_directory() . '/inc/jetpack.php';
 /**
  * Add button class to next/previous post links
  */
-function editor_posts_link_attributes() {
+function wedge_posts_link_attributes() {
     return 'class="button"';
 }
-add_filter( 'next_posts_link_attributes', 'editor_posts_link_attributes' );
-add_filter( 'previous_posts_link_attributes', 'editor_posts_link_attributes' );
+add_filter( 'next_posts_link_attributes', 'wedge_posts_link_attributes' );
+add_filter( 'previous_posts_link_attributes', 'wedge_posts_link_attributes' );
 
 /**
  * Remove admin bar CSS in favor of our own
  */
-function editor_remove_adminbar_css() {
+function wedge_remove_adminbar_css() {
 	remove_action( 'wp_head', '_admin_bar_bump_cb' );
 }
-add_action( 'get_header', 'editor_remove_adminbar_css' );
+add_action( 'get_header', 'wedge_remove_adminbar_css' );

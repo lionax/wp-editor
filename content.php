@@ -1,6 +1,6 @@
 <?php
 /**
- * @package Editor
+ * @package Wedge
  */
 ?>
 
@@ -13,13 +13,13 @@
 	<header class="entry-header">
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-date">
-			<?php editor_posted_on(); ?>
+			<?php wedge_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 
 		<?php
 			if ( 'link' == get_post_format() ) :
-				the_title( '<h1 class="entry-title"><a href="' . esc_url( editor_get_link_url() ) . '" rel="bookmark">', '</a></h1>' );
+				the_title( '<h1 class="entry-title"><a href="' . esc_url( wedge_get_link_url() ) . '" rel="bookmark">', '</a></h1>' );
 			else :
 				if ( is_single() ) :
 					the_title( '<h1 class="entry-title">', '</h1>' );
@@ -33,10 +33,10 @@
 	<?php get_template_part( 'content', 'meta' ); ?>
 
 	<div class="entry-content">
-		<?php the_content( __( 'Continue reading &rarr;', 'editor' ) ); ?>
+		<?php the_content( __( 'Continue reading &rarr;', 'wedge' ) ); ?>
 		<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'editor' ),
+				'before' => '<div class="page-links">' . __( 'Pages:', 'wedge' ),
 				'after'  => '</div>',
 			) );
 		?>

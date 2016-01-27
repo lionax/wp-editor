@@ -2,7 +2,7 @@
 /**
  * The Template for displaying all single posts.
  *
- * @package Editor
+ * @package Wedge
  */
 
 get_header(); ?>
@@ -14,7 +14,7 @@ get_header(); ?>
 
 			<?php get_template_part( 'content', get_post_format() ); ?>
 
-			<?php editor_post_nav(); ?>
+			<?php wedge_post_nav(); ?>
 
 			<?php
 				// If comments are open or we have at least one comment, load up the comment template

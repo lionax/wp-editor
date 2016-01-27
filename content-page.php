@@ -2,7 +2,7 @@
 /**
  * The template used for displaying page content in page.php
  *
- * @package Editor
+ * @package Wedge
  */
 ?>
 
@@ -13,6 +13,7 @@
 	<?php } ?>
 
 	<header class="entry-header">
+		<?php edit_post_link( __( 'Edit', 'wedge' ), '<span class="edit-link">', '</span>' ); ?>
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 	</header><!-- .entry-header -->
 
@@ -20,10 +21,9 @@
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'editor' ),
+				'before' => '<div class="page-links">' . __( 'Pages:', 'wedge' ),
 				'after'  => '</div>',
 			) );
 		?>
 	</div><!-- .entry-content -->
-	<?php edit_post_link( __( 'Edit', 'editor' ), '<footer class="entry-footer"><span class="edit-link">', '</span></footer>' ); ?>
 </article><!-- #post-## -->

@@ -1,30 +1,32 @@
-# Fork of Editor WordPress Theme
-Contributors: lionax, array, okaythemes
-Tags: light, white, gray, two-columns, left-sidebar, responsive-layout, custom-colors, editor-style, featured-images, theme-options, threaded-comments, translation-ready, photoblogging
+# Wedge WordPress Theme
+Contributors: 8api, array, okaythemes
+Tags: light, white, gray, two-columns, left-sidebar, responsive-layout, custom-colors, wedge-style, featured-images, theme-options, threaded-comments, translation-ready, photoblogging
 Requires at least: 3.8
-Tested up to: 3.9.1
-Stable tag: 1.1.3
+Tested up to: 4.4.1
+Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Screenshot image license: GPLv2 or later
 
-The name of this theme will be updated, as soon as the next release is finished.
-
 ## Description
 
-Editor puts bold and beautiful publishing right at your fingertips with comfortable, legible typography and large featured images. Using Featured Posts, you can display your favorite articles or editorials in the sidebar for even more exposure.
+Prior to this fork called the Editor theme by Array.io. Make sure to check out their nice website [array.io](https://array.io)
+
+Wedge puts bold and beautiful publishing right at your fingertips with comfortable, legible typography and large featured images. Using Featured Posts, you can display your favorite articles or wedgeials in the sidebar for even more exposure.
 
 ----------
 
-### Getting started with Editor WordPress Theme
+### Getting started with Wedge WordPress Theme
 
 **Using the Theme Customizer**
-You can change Editor’s theme options via the Customizer.
+You can change Wedge’s theme options via the Customizer.
 
-* To access the theme customizer, click Appearance → Customize in the WordPress admin menu. Editor’s options are located in the Theme Options tab.
-* Logo Upload: Upload your own logo to use in place of your site’s text title.
+* To access the theme customizer, click Appearance → Customize in the WordPress admin menu. Wedge’s options are located in the Theme Options tab.
+* Logo Upload: Upload your own logo to accentuate your site title and description.
+* Logo Top Background: Upload an Image that will be displayed in background at the top of the branding-section of the sidebar.
 * Sidebar Featured Post Category: Select a category from the drop down to feature a certain category in your sidebar. Leave this option blank if you don’t want to show the featured post area.
 * Sidebar Color: Choose between a light and dark color scheme for your sidebar.
+* Sidebar Searchform: Activate an additional tab in mobile view / section in sidebar with a nice search form.
 * When you’re finished making changes, click Save & Publish to save the settings. Check out your site to confirm your changes.
 
 ----------
@@ -41,13 +43,13 @@ You’ll need to create at least one new menu for the header.
 ----------
 
 ### Installing Jetpack
-Jetpack is a WordPress plugin by Automattic, the folks who make WordPress. It’s a toolkit that provides various features and enhancements to your WordPress site. Editor utilizes several features (infinite scroll, carousel, etc.) of Jetpack, and must be installed for the theme to work as you see in the demo.
+Jetpack is a WordPress plugin by Automattic, the folks who make WordPress. It’s a toolkit that provides various features and enhancements to your WordPress site. Wedge utilizes several features (infinite scroll, carousel, etc.) of Jetpack, and must be installed for the theme to work as you see in the demo.
 
 * Install Jetpack by going to Plugins → Add New and search for “Jetpack”. Install and activate the plugin. Once installed, you can enable Jetpack by
 * After activating Jetpack by WordPress.com, you will be asked to connect to WordPress.com to enable the Jetpack features.
 * Click the connect button and log in to a WordPress.com account to authorize the Jetpack connection.
 If you don’t yet have a WordPress.com account, you can quickly create one after clicking the connect button.
-* Once installed, activated, and connected to WordPress.com, you can visit the Jetpack settings page, which is now available at the top of your admin menu. Editor utilizes the following modules:
+* Once installed, activated, and connected to WordPress.com, you can visit the Jetpack settings page, which is now available at the top of your admin menu. Wedge utilizes the following modules:
 
 Carousel – The Carousel adds a beautiful lightbox carousel to your gallery images. This can be seen on the gallery posts on the homepage of the demo.
 
@@ -60,22 +62,27 @@ Infinite Scroll – Infinite Scroll is a feature that loads the next set of post
 ----------
 
 ### Contact Page
-Editor utilizes Jetpack’s contact form module for adding contact forms to your pages.
+Wedge utilizes Jetpack’s contact form module for adding contact forms to your pages.
 
 * Firstly, make sure the Contact Form module is activated on the Jetpack page.
 * Go to Pages → Add New to create a new page to use as the contact page.
-* To create a contact form, click the contact form icon above the post editor. Visit the Jetpack Contact Form page (http://jetpack.me/support/contact-form/) for more information on how to create a contact form.
+* To create a contact form, click the contact form icon above the post wedge. Visit the Jetpack Contact Form page (http://jetpack.me/support/contact-form/) for more information on how to create a contact form.
 * Publish the page when finished.
 
 ----------
 
 ### Widgets
-The widget section of Editor is located in the sidebar as a hidden menu. You can view your widgets by clicking the folder icon in Editor’s sidebar menu.
+The widget section of Wedge is located in the sidebar as last section. You can view your widgets on mobile devices by clicking the folder icon in Wedge’s sidebar top panel.
+
+----------
+
+### Featured Posts Section
+One can select a specific post category as featured category. If selected it will be located after the search panel.
 
 ----------
 
 ### Creating Media Posts
-Editor makes it easy to share your images, videos, and quotes.
+Wedge makes it easy to share your images, videos, and quotes.
 
 **Featured Image Posts**
 
@@ -86,19 +93,19 @@ Editor makes it easy to share your images, videos, and quotes.
 
 **Quote Post**
 
-* Create a new post and add a title and add your quote to the editor.
+* Create a new post and add a title and add your quote to the wedge.
 * Add a quote citation by adding a name and wrapping it in a tag. See an example.
 * On the right hand side of your page, you’ll see the Format pane. Click Quote to set the post format.
 * Once you’ve added your quote and selected the Quote format you can publish and preview your post.
 
 ----------
 
-### Post Styles
-Editor comes with a few custom element styles, which are used to easily add extra styling to your WordPress posts.
+### Extra Element Styles
+Wedge comes with a few custom element styles, which are used to easily add extra styling to your WordPress posts.
 
 **Pull Quotes**
 
-Pull quotes are similar to block quotes, but are reserved for less text. See Editor’s Style Guide to see the suggested usage. To use pull quotes you can add a class of pull-left or pull-right to your content. See an example below.
+Pull quotes are similar to block quotes, but are reserved for less text. See Wedge’s Style Guide to see the suggested usage. To use pull quotes you can add a class of pull-left or pull-right to your content. See an example below.
 
 <span class="pull-right">This text will be pulled right.</span>
 
@@ -110,13 +117,13 @@ Text highlight simply adds a yellow background to your text, useful for in-parag
 
 ----------
 
-## License Info
+## License Info for fontawesome
 Font Awesome - ​http://fontawesome.io
 License: SIL OFL 1.1, CSS: MIT License - http://fontawesome.io/license
 Copyright: @davegandy
 
 
-### Installation
+## Installation
 
 1. Sign into your WordPress dashboard, go to Appearance > Themes, and click Add New.
 2. Click Add New.
@@ -127,21 +134,21 @@ Copyright: @davegandy
 7. After WordPress installs the theme, click Activate.
 8. You've successfully installed your new theme!
 
-### Frequently Asked Questions
+## Frequently Asked Questions
 
-## I need help! What should I do?
+### I need help! What should I do?
 
-Leave an issue at the github repo github.de/lionax/wp-editor.
+Leave an issue at the github repo github.de/lionax/wp-wedge.
 Or leave a comment at the blog post on 8api.de.
-Questions on features before Version 1.1.3 can be answered by the great people at the support forum of array.is.
+Questions on features before Version 1.0 can be answered by the great people at the support forum of array.is.
 
-## Screenshots
+## Change Log
+**1.0.0 - 26.01.2016**
 
-1. The theme home page filled with demo content.
 
-### Change Log
+## Change Log (Prior to Wedge 1.0: Editor)
 **1.1.3 - 9/16/15**
-* Ported improvements from WordPress.com version of Editor. Adds accessibility improvements, social links menu (see here for use: https://en.support.wordpress.com/menus/social-links-menu/) and general file cleanup.
+* Ported improvements from WordPress.com version of Wedge. Adds accessibility improvements, social links menu (see here for use: https://en.support.wordpress.com/menus/social-links-menu/) and general file cleanup.
 * Added link post format.
 * Fixed byline appearance on index.
 
@@ -185,7 +192,3 @@ Questions on features before Version 1.1.3 can be answered by the great people a
 
 **1.0 - 5/21/2014**
 * Initial release.
-
-### Upgrade Notice
-**1.0.4**
-Fixed an issue with icon fonts and styles for Internet Explorer not loading in child themes.

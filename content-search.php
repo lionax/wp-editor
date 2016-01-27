@@ -2,7 +2,7 @@
 /**
  * The template for displaying search results.
  *
- * @package Editor
+ * @package Wedge
  */
 ?>
 
@@ -14,14 +14,14 @@
 
 	<header class="entry-header">
 		<div class="entry-date">
-			<?php editor_posted_on(); ?>
+			<?php wedge_posted_on(); ?>
 		</div><!-- .entry-meta -->
 
 		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php the_excerpt( __( 'Continue reading &rarr;', 'editor' ) ); ?>
+		<?php the_excerpt( __( 'Continue reading &rarr;', 'wedge' ) ); ?>
 	</div><!-- .entry-content -->
 
 </article><!-- #post-## -->

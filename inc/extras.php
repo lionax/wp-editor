@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features
  *
- * @package Editor
+ * @package Wedge
  */
 
 /**
@@ -13,11 +13,11 @@
  * @param array $args Configuration arguments.
  * @return array
  */
-function editor_page_menu_args( $args ) {
+function wedge_page_menu_args( $args ) {
 	$args['show_home'] = true;
 	return $args;
 }
-add_filter( 'wp_page_menu_args', 'editor_page_menu_args' );
+add_filter( 'wp_page_menu_args', 'wedge_page_menu_args' );
 
 /**
  * Adds custom classes to the array of body classes.
@@ -25,7 +25,7 @@ add_filter( 'wp_page_menu_args', 'editor_page_menu_args' );
  * @param array $classes Classes for the body element.
  * @return array
  */
-function editor_body_classes( $classes ) {
+function wedge_body_classes( $classes ) {
 	// Adds a class of group-blog to blogs with more than 1 published author.
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
@@ -33,7 +33,7 @@ function editor_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'editor_body_classes' );
+add_filter( 'body_class', 'wedge_body_classes' );
 
 /**
  * Filters wp_title to print a neat <title> tag based on what is being viewed.
@@ -42,7 +42,7 @@ add_filter( 'body_class', 'editor_body_classes' );
  * @param string $sep Optional separator.
  * @return string The filtered title.
  */
-function editor_wp_title( $title, $sep ) {
+function wedge_wp_title( $title, $sep ) {
 	if ( is_feed() ) {
 		return $title;
 	}
@@ -60,12 +60,12 @@ function editor_wp_title( $title, $sep ) {
 
 	// Add a page number if necessary:
 	if ( $paged >= 2 || $page >= 2 ) {
-		$title .= " $sep " . sprintf( __( 'Page %s', 'editor' ), max( $paged, $page ) );
+		$title .= " $sep " . sprintf( __( 'Page %s', 'wedge' ), max( $paged, $page ) );
 	}
 
 	return $title;
 }
-add_filter( 'wp_title', 'editor_wp_title', 10, 2 );
+add_filter( 'wp_title', 'wedge_wp_title', 10, 2 );
 
 /**
  * Sets the authordata global when viewing an author archive.
@@ -79,14 +79,14 @@ add_filter( 'wp_title', 'editor_wp_title', 10, 2 );
  * @global WP_Query $wp_query WordPress Query object.
  * @return void
  */
-function editor_setup_author() {
+function wedge_setup_author() {
 	global $wp_query;
 
 	if ( $wp_query->is_author() && isset( $wp_query->post ) ) {
 		$GLOBALS['authordata'] = get_userdata( $wp_query->post->post_author );
 	}
 }
-add_action( 'wp', 'editor_setup_author' );
+add_action( 'wp', 'wedge_setup_author' );
 
 /**
  * Return the post URL to use as link for h1 on link post formats.
@@ -98,7 +98,7 @@ add_action( 'wp', 'editor_setup_author' );
  *
  * @return string The Link format URL.
  */
-function editor_get_link_url() {
+function wedge_get_link_url() {
 	$content = get_the_content();
 	$check_url = get_url_in_content( $content );
 

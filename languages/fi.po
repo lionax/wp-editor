@@ -2,8 +2,8 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Editor 1.0.5\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/tags/editor\n"
+"Project-Id-Version: Wedge 1.0.5\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tags/wedge\n"
 "POT-Creation-Date: 2014-08-29 17:14:16+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -315,22 +315,22 @@ msgid "Meta"
 msgstr "Meta"
 
 #. Theme Name of the plugin/theme
-msgid "Editor"
-msgstr "Editori"
+msgid "Wedge"
+msgstr "Wedgei"
 
 #. Theme URI of the plugin/theme
-msgid "https://array.is/themes/editor-wordpress-theme/"
-msgstr "https://array.is/themes/editor-wordpress-theme/"
+msgid "https://array.is/themes/wedge-wordpress-theme/"
+msgstr "https://array.is/themes/wedge-wordpress-theme/"
 
 #. Description of the plugin/theme
 msgid ""
-"Editor puts bold and beautiful publishing right at your fingertips with "
+"Wedge puts bold and beautiful publishing right at your fingertips with "
 "comfortable, legible typography and large featured images. Using Featured "
-"Posts, you can display your favorite articles or editorials in the sidebar "
+"Posts, you can display your favorite articles or wedgeials in the sidebar "
 "for even more exposure. Please open the readme.txt file to learn how to use "
-"Editor."
+"Wedge."
 msgstr ""
-"Editori näyttää julkaisusi kauniilla ja rohkealla tavalla, jossa on selkeä "
+"Wedgei näyttää julkaisusi kauniilla ja rohkealla tavalla, jossa on selkeä "
 "typografia ja isot artikkelikuvat. Voit näyttää sivupalkissa halutun "
 "kategorian artikkelit. Muista avata teeman readme.txt tiedosto lisäohjeita "
 "varten."
