@@ -1367,7 +1367,7 @@ embed, iframe, object {
 	}
 	@include at-width(10) {
 		width: 30%;
-		padding: 5%;
+		padding: 5% 5% 5% 3%;
 	}
 	.dark & {
 		background: #383F49;
@@ -1873,7 +1873,7 @@ embed, iframe, object {
 	padding-top: 20px;
 	width: 100%;
 	display: inline-block !important;
-	@include at-width(6.5) {
+	@include at-width(3) {
 		margin: 0 auto 1em;
 		padding-top: 30px;
 	}
@@ -1900,7 +1900,7 @@ embed, iframe, object {
 	border-radius: 50%;
 	text-align: center;
 
-	@include at-width(6.5) {
+	@include at-width(3) {
 		min-height: 40px;
 		min-width: 40px;
 		line-height: 40px;
@@ -1926,7 +1926,7 @@ embed, iframe, object {
 	.dark & {
 		color: $black;
 	}
-	@include at-width(10) {
+	@include at-width(3) {
 		font-size: 0.9em;
 	}
 }
@@ -1943,67 +1943,67 @@ embed, iframe, object {
 	}
 }
 
-a[href*='wordpress.org']:before,
-a[href*='wordpress.com']:before {
+.site a[href*='wordpress.org']:before,
+.site a[href*='wordpress.com']:before {
 	content:'\f19a';
 }
 
-a[href*='facebook.com']:before {
+.site a[href*='facebook.com']:before {
 	content:'\f09a';
 }
 
-a[href*='twitter.com']:before {
+.site a[href*='twitter.com']:before {
 	content:'\f099';
 }
 
-a[href*='dribbble.com']:before {
+.site a[href*='dribbble.com']:before {
 	content:'\f17d';
 }
 
-a[href*='plus.google.com']:before {
+.site a[href*='plus.google.com']:before {
 	content:'\f0d5';
 }
 
-a[href*='pinterest.com']:before {
+.site a[href*='pinterest.com']:before {
 	content:'\f0d2';
 }
 
-a[href*='github.com']:before {
+.site a[href*='github.com']:before {
 	content:'\f09b';
 }
 
-a[href*='tumblr.com']:before {
+.site a[href*='tumblr.com']:before {
 	content:'\f173';
 }
 
-a[href*='youtube.com']:before {
+.site a[href*='youtube.com']:before {
 	content:'\f167';
 }
 
-a[href*='flickr.com']:before {
+.site a[href*='flickr.com']:before {
 	content:'\f16e';
 }
 
-a[href*='vimeo.com']:before {
+.site a[href*='vimeo.com']:before {
 	content:'\f194';
 }
 
-a[href*='instagram.com']:before {
+.site a[href*='instagram.com']:before {
 	content:'\f16d';
 }
 
-a[href*='codepen.io']:before {
+.site a[href*='codepen.io']:before {
 	content:'\f1cb';
 }
 
-a[href*='linkedin.com']:before {
+.site a[href*='linkedin.com']:before {
 	content:'\f0e1';
 }
 
-a[href*='/feed']:before {
+.site a[href*='/feed']:before {
 	content:'\f09e';
 }
 
-a[href*='mailto']:before {
+.site a[href*='mailto']:before {
 	content:'\f0e0';
 }
