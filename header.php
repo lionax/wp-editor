@@ -6,8 +6,14 @@
  *
  * @package Wedge
  */
-	$wedge_color = get_option( 'wedge_customizer_sidebar_color' );
-?><!DOCTYPE html>
+	$wedge_color = get_theme_mod( 'wedge_customizer_sidebar_color' );
+	$wedge_featured_cat = get_theme_mod( 'wedge_featured_cat' );
+	$logo_bg = get_theme_mod( 'wedge_customizer_logo_bg' );
+	$logo = get_theme_mod( 'wedge_customizer_logo' );
+	$hide_title = get_theme_mod( 'wedge_customizer_hide_title' );
+	$hide_desc = get_theme_mod( 'wedge_customizer_hide_desc' );
+?>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -27,10 +33,9 @@
 
 	<!-- Get sidebar color option (Appearance -> Customize -> Theme Options) -->
 	<?php
-		$wedge_sidebar_color = get_option( 'wedge_customizer_sidebar_color' );
-		$wedge_featured_cat = get_theme_mod( 'wedge_featured_cat' );
+		
 	?>
-	<header id="masthead" class="site-header <?php echo $wedge_sidebar_color; ?>" role="banner">
+	<header id="masthead" class="site-header" role="banner">
 		<!-- Tab navigation -->
 		<ul class="toggle-bar" role="tablist">
 			<!-- Main navigation -->
