@@ -92,6 +92,8 @@ function wedge_customizer_register( $wp_customize ) {
         'priority' => 150
     ) );
 
+    // ### TITLE TAGLINE ###
+
 	// Logo Image Upload
 	$wp_customize->add_setting( 'wedge_customizer_logo', array(
         'sanitize_callback' => 'esc_url_raw'
@@ -102,6 +104,17 @@ function wedge_customizer_register( $wp_customize ) {
 		'section'  => 'title_tagline',
 		'settings' => 'wedge_customizer_logo'
 	) ) );
+
+    // Logo Image Background Upload
+    $wp_customize->add_setting( 'wedge_customizer_logo_bg', array(
+        'sanitize_callback' => 'esc_url_raw'
+    ) );
+
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'wedge_customizer_logo_bg', array(
+        'label'    => __( 'Logo-Background Upload', 'wedge' ),
+        'section'  => 'title_tagline',
+        'settings' => 'wedge_customizer_logo_bg'
+    ) ) );
 
     // Hide Title?
     $wp_customize->add_setting( 'wedge_customizer_hide_title', array(
@@ -123,16 +136,27 @@ function wedge_customizer_register( $wp_customize ) {
         'type'      => 'checkbox'
     ) );
 
-    // Logo Image Background Upload
-    $wp_customize->add_setting( 'wedge_customizer_logo_bg', array(
-        'sanitize_callback' => 'esc_url_raw'
+    // ### COLORS ###
+
+    // Color Scheme
+    $wp_customize->add_setting( 'wedge_customizer_sidebar_color', array(
+        'default'           => 'light',
+        'capability'        => 'edit_theme_options',
+        'sanitize_callback' => 'wedge_sanitize_scheme_select'
+    ));
+
+    $wp_customize->add_control( 'wedge_customizer_sidebar_color_select', array(
+        'settings' => 'wedge_customizer_sidebar_color',
+        'label'    => __( 'Sidebar Color', 'wedge' ),
+        'section'  => 'colors',
+        'type'     => 'select',
+        'choices'  => array(
+            'dark'     => __( 'Dark', 'wedge' ),
+            'light'    => __( 'Light', 'wedge' ),
+        ),
     ) );
 
-    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'wedge_customizer_logo_bg', array(
-        'label'    => __( 'Logo-Background Upload', 'wedge' ),
-        'section'  => 'header_image',
-        'settings' => 'wedge_customizer_logo_bg'
-    ) ) );
+    // ### ASIDE ###
 
     // Show Search-Bar
     $wp_customize->add_setting( 'wedge_customizer_sidebar_search', array(
@@ -156,25 +180,6 @@ function wedge_customizer_register( $wp_customize ) {
         'section'  => 'wedge_customizer_aside',
         'settings' => 'wedge_featured_cat'
     ) ) );
-
-    // Color Scheme
-    $wp_customize->add_setting( 'wedge_customizer_sidebar_color', array(
-        'default'           => 'light',
-        'capability'        => 'edit_theme_options',
-        'sanitize_callback' => 'wedge_sanitize_scheme_select'
-    ));
-
-    $wp_customize->add_control( 'wedge_customizer_sidebar_color_select', array(
-        'settings' => 'wedge_customizer_sidebar_color',
-        'label'    => __( 'Sidebar Color', 'wedge' ),
-        'section'  => 'colors',
-        'type'     => 'select',
-        'choices'  => array(
-            'dark'     => __( 'Dark', 'wedge' ),
-            'light'    => __( 'Light', 'wedge' ),
-        ),
-    ) );
-
 }
 
 /**
