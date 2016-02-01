@@ -1365,7 +1365,7 @@ embed, iframe, object {
 	transform: translate(0px, 0px);
 	@include at-width(6.5) {
 		margin-left: 0;
-		padding: 7% 5% 3%;
+		padding: 5% 5% 3%;
 		position: absolute;
 		width: 35%;
 		background: none;
@@ -1374,7 +1374,7 @@ embed, iframe, object {
 	@include at-width(10) {
 		width: 30%;
 		max-width: 35em;
-		padding: 7% 5% 5% 3%;
+		padding: 5% 5% 5% 3%;
 	}
 	.dark & {
 		background: #383F49;
