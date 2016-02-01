@@ -160,7 +160,7 @@ function wedge_customizer_register( $wp_customize ) {
 
     // Show Search-Bar
     $wp_customize->add_setting( 'wedge_customizer_sidebar_search', array(
-        'default'           => true
+        'default'           => false
     ) );
     $wp_customize->add_control( 'wedge_customizer_sidebar_search', array(
 
