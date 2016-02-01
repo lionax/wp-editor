@@ -531,9 +531,6 @@ a:before {
 	border-top: solid 4px #eee;
 	overflow: hidden;
 	margin-bottom: 4%;
-	@include at-width(6.5) {
-		margin-bottom: 0;
-	}
 	a {
 		color: $black;
 		&:hover {
@@ -601,8 +598,6 @@ a:before {
 		border-right: none;
 		border-bottom: solid 2px $lightgray;
 		@include at-width(6.5) {
-			margin-bottom: 0;
-			padding-bottom: 0;
 			padding-right: 5%;
 			border-bottom: none;
 		}
@@ -1411,7 +1406,6 @@ embed, iframe, object {
 	}
 }
 .site-header-inside {
-	max-width: 20em;
 	margin: auto;
 	@include at-width(6.5) {
 		max-width: auto;
