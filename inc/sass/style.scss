@@ -47,6 +47,25 @@ TABLE OF CONTENTS
 @import 'variables';
 
 /* --------------------------------------------------------------
+0.0 - AdaptiveStyles:at-width fix
+-------------------------------------------------------------- */
+@include at-width(3) {
+	html {
+		font-family: inherit;
+	}
+}
+@include at-width(6.5) {
+	html {
+		font-family: inherit;
+	}
+}
+@include at-width(10) {
+ 	html {
+		font-family: inherit;
+	}
+}
+
+/* --------------------------------------------------------------
 1.0 - Reset
 -------------------------------------------------------------- */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
